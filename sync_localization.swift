@@ -19,21 +19,14 @@ func humanizeKey(_ key: String) -> String {
     var result = key.replacingOccurrences(of: "_", with: " ")
     let regex = try? NSRegularExpression(pattern: "([a-z])([A-Z])", options: [])
     result = regex?.stringByReplacingMatches(in: result, options: [], range: NSRange(location: 0, length: result.utf16.count), withTemplate: "$1 $2") ?? result
-    return result.capitalized
+    return result
 }
 
 func translate(text: String, from sourceLang: String, to targetLang: String) -> String? {
-    // Map non-standard language codes
-    let mappedTargetLang: String
-    switch targetLang {
-    case "gj": mappedTargetLang = "gu" // Gujarati
-    default: mappedTargetLang = targetLang
-    }
-    
     var components = URLComponents(string: "https://api.mymemory.translated.net/get")
     components?.queryItems = [
         URLQueryItem(name: "q", value: text),
-        URLQueryItem(name: "langpair", value: "\(sourceLang)|\(mappedTargetLang)")
+        URLQueryItem(name: "langpair", value: "\(sourceLang)|\(targetLang)")
     ]
     
     guard let url = components?.url else { return nil }
