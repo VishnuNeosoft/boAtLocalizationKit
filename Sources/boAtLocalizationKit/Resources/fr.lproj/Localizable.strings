@@ -1,3 +1,5 @@
 "hello" = "Bonjour";
 "welcome" = "Bienvenue";
 "change_language" = "Changer la langue";
+"how_are_you" = "";
+"logout" = "Déconnexion";

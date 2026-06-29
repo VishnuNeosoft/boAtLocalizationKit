@@ -13,6 +13,8 @@ public enum Language: String, CaseIterable, Identifiable, Sendable {
     case english = "en"
     case spanish = "es"
     case french  = "fr"
+    case hindi    = "hi"
+    case gujarati = "gj"
 
     public var id: String { rawValue }
 
@@ -22,6 +24,8 @@ public enum Language: String, CaseIterable, Identifiable, Sendable {
         case .english: return "English"
         case .spanish: return "Español"
         case .french:  return "Français"
+        case .hindi:  return "Hindi"
+        case .gujarati:  return "Gujarati"
         }
     }
 

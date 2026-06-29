@@ -13,4 +13,6 @@ public enum LocalizedKey: String, CaseIterable, Sendable {
     case hello
     case welcome
     case changeLanguage = "change_language"
+    case howAreYou = "how_are_you"
+    case logout
 }

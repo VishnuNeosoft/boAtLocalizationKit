@@ -1,3 +1,5 @@
 "hello" = "Hola";
 "welcome" = "Bienvenido";
 "change_language" = "Cambiar idioma";
+"how_are_you" = "como estas le negro";
+"logout" = "Cerrar sesión";
